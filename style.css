@@ -1,0 +1,75 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+img {
+    width: 100%;
+}
+
+/* struttura pagina */
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/* main */
+
+.main_wrapper {
+    background-color: black;
+    height: 100%;
+    padding: 100px 0 25px;
+}
+
+.user_wrapper { 
+    display: flex;
+    flex-direction: row;
+    gap: 10px 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.user_card {
+    position: relative;
+    width: 250px;
+    height: 165px;
+}
+
+/* badge user-name  */
+.badge {
+    position: absolute;
+    background-color: rgba(0,0,0,0.4);
+    bottom: 0;
+    left: 0;
+}
+
+.badge ul {
+    list-style: none;
+    padding: 5px 10px;
+}
+
+.badge ul li {
+    color: white;
+    font-size: 12px;
+    display: inline-block;
+}
+
+.badge ul li i {
+    font-size: 14px;
+}
