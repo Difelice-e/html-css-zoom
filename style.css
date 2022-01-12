@@ -29,12 +29,21 @@ main {
     justify-content: center;
 }
 
+#user_control {
+    display: flex;
+    flex-direction: row;   
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background-color: #222222;
+}
+
 /* main */
 
 .main_wrapper {
     background-color: black;
     height: 100%;
-    padding: 100px 0 25px;
+    padding: 100px 100px 25px;
 }
 
 .user_wrapper { 
@@ -43,12 +52,13 @@ main {
     gap: 10px 20px;
     flex-wrap: wrap;
     justify-content: center;
+    height: 100%;
 }
 
 .user_card {
     position: relative;
-    width: 250px;
-    height: 165px;
+    max-width: 250px;
+    max-height: 150px;
 }
 
 /* badge user-name  */
@@ -72,4 +82,120 @@ main {
 
 .badge ul li i {
     font-size: 14px;
+}
+
+/* controlli utente */
+
+/* navbar_centrale */
+.user_control_main {
+    display: flex;
+    flex-direction: row;
+    gap: 5px 10px;
+}
+
+.user_control_main ul {
+    list-style: none;
+    display: contents;
+}
+
+.user_control_main ul li {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px;
+}
+
+.user_control_main ul li a {
+    text-decoration: none;
+    color: currentColor;
+    font-size: 12px;
+}
+
+.user_control_main ul li i {
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.user_control_main ul .chevron {
+    align-self: center;
+}
+
+.chevron i {
+    font-size: 10px;
+    margin: 0 10px;
+}
+
+.user_control_main ul li i:active {
+   color: #339AF0;
+}
+
+
+.user_control_main ul li:nth-child(4) i {
+    color: rgba(32, 201, 32, 0.822);
+}
+
+/* user_audiovideo */
+#user_audiovideo {
+    display: flex;
+    flex-direction: row;
+    gap: 0 10px;
+    margin-left: 10px;
+}
+
+#user_audiovideo ul {
+    display: contents;
+    list-style: none;
+}
+
+#user_audiovideo ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#user_audiovideo ul li i {
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+#user_audiovideo ul li i:active {
+    color: #339AF0;
+ }
+
+#user_audiovideo ul li a {
+    text-decoration: none;
+    color: currentColor;
+    font-size: 12px;
+}
+
+#user_audiovideo .chevron i {
+    font-size: 10px;
+}
+
+/* side_menu_dx */
+#side_menu_dx {
+    height: 100%;
+}
+
+.end_meeting {
+   background-color: #505050;
+   display: flex;
+   flex-direction: row;
+   height: 100%;
+   justify-content: center;
+   align-items: center;
+}
+
+.end_meeting a {
+    padding: 10px 20px;
+    color: red;
+    text-decoration: none;
+}
+
+.end_meeting a:hover {
+    color: white;
 }
