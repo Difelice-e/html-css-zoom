@@ -38,6 +38,35 @@ main {
     background-color: #222222;
 }
 
+/* other command */
+.other_cmd_wrapper {
+    position: fixed;
+    top: 5px;
+    right: 5px;
+}
+
+.other_cmd_module {
+    font-size: 14px;
+    color: white;
+    background-color: rgb(80, 80, 80);
+    display: inline-block;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.other_cmd_module a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+.other_cmd_module i {
+    font-size: 16px;
+}
+
+.other_cmd_module:hover {
+    color: #339AF0;
+}
+
 /* main */
 
 .main_wrapper {
@@ -55,6 +84,17 @@ main {
     height: 100%;
 }
 
+.user_card:hover:after {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255,255,255,.5);
+}
+
 .user_card {
     position: relative;
     max-width: 250px;
@@ -64,9 +104,10 @@ main {
 /* badge user-name  */
 .badge {
     position: absolute;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,0.25);
     bottom: 0;
     left: 0;
+    z-index: 9;
 }
 
 .badge ul {
@@ -84,9 +125,7 @@ main {
     font-size: 14px;
 }
 
-/* controlli utente */
-
-/* navbar_centrale */
+/* navbar_centrale controlli utente*/
 .user_control_main {
     display: flex;
     flex-direction: row;
@@ -126,7 +165,7 @@ main {
     margin: 0 10px;
 }
 
-.user_control_main ul li i:active {
+.user_control_main ul li:hover:not(li:nth-child(4)) {
    color: #339AF0;
 }
 
@@ -135,7 +174,7 @@ main {
     color: rgba(32, 201, 32, 0.822);
 }
 
-/* user_audiovideo */
+/* user_audiovideo buttons */
 #user_audiovideo {
     display: flex;
     flex-direction: row;
@@ -162,8 +201,10 @@ main {
     margin-bottom: 5px;
 }
 
-#user_audiovideo ul li i:active {
+#user_audiovideo ul li:hover {
     color: #339AF0;
+    scale: 90%;
+    animation: 500ms;
  }
 
 #user_audiovideo ul li a {
@@ -176,11 +217,7 @@ main {
     font-size: 10px;
 }
 
-/* side_menu_dx */
-#side_menu_dx {
-    height: 100%;
-}
-
+/* end meeting button */
 .end_meeting {
    background-color: #505050;
    display: flex;
